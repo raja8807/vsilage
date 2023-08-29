@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Layout from "@/components/ui/custom_container/layout/laout";
+import Chatter from "@/components/chatter/chatter";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Layout>
         <Component {...pageProps} />
+        <Chatter />
       </Layout>
     </>
   );
