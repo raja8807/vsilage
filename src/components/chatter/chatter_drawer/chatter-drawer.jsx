@@ -9,6 +9,7 @@ const { Offcanvas } = require("react-bootstrap");
 
 const ChatterDrawer = (props) => {
   const { show, setShow } = props;
+  const handleClose = () => setShow(false);
 
   const [session, setSession] = useState(null);
   const [currentUserEmail, setCurrentUserEmail] = useState(null);
@@ -17,7 +18,6 @@ const ChatterDrawer = (props) => {
     setCurrentUserEmail(sessionStorage.getItem("currentUserEmail"));
   }, []);
 
-  const handleClose = () => setShow(false);
 
   const [currentChatEmail, setCurrentChatEmail] = useState(null);
 
